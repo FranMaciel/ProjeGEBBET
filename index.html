@@ -8,79 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="js/scripts.js" defer></script>
+    <script src="" defer></script>
 </head>
-<body class="flex-container">
+<body id="pgInicial" class="flex-container">
     <header class="row">
-        <figure class="col-md-2">
-            <a href="inicial.html"><img src="img/Logo.png" alt="" id="logo"></a>
+        <figure class="">
+            <img id="logoPgInicial" src="img/Logo.png" alt="" id="logo">
         </figure>
-        <h1 id="titulo" class="col-md-10">GEB GET</h1>
+        <h2  class="">Calculadora</h2>
+        <h1 id="tituloPgInicial" class="">GEB GET</h1>
     </header>
-    <main>
-        <div id="result-container" class="hide">
-            <h2 id="result">RESULTADO</h2>          
-            <p id="resultIMC">IMC: <span id="valorIMC"> </span> kg/m².</p>
-            <p id="resultClassif">Classificação: <span id="classificIMC"> </span>. </p>
-            <p id="resultGEB">GEB: <span id="valorGEB"></span> kcal. </p>
-            <p id="resultGET">GET: <span id="valorGET"></span> kcal/dia. </p>
-            <div id="btn-consult">
-                <a id="novaConsult" href="index.html">NOVA CONSULTA</a>
-            </div>
-        </div>
-
-        <div id="form-container">
-            <h2>PREENCHA OS DADOS</h2>
-            <form id="dados" method="post" >
-                <div id="genero" class="flex-container">
-                    <label id="gen">GÊNERO: </label><br>
-                    <input type="radio"  class="radio" id="generoF"  name="genero" value="f"><label id="generoF" for="generoF">Feminino</label>
-                    <input type="radio"  class="radio" id="generoM"  name="genero" value="m"><label id="generoM" for="generoM">Masculino</label>
-                    <!--<span class="span-required">Escolha o gênero.</span>-->
-                </div>
-                <div id="idade">
-                    <label id="id" for="inputIdade">IDADE: </label><br>
-                    <input id="inputIdade" type="number" name="idade" class="inputs required"><a> anos</a>
-                </div>
-                <div id="pesAlt" class="row">
-                    <div id="peso">
-                        <label id="pe" for="peso">PESO: </label><br>
-                        <input type="number" id="inputPeso" name="peso" class="inputs required"><a> kg</a>
-                    </div>
-                    <div id="altura">
-                        <label id="al" for="altura">ALTURA: </label><br>
-                        <input type="number" id="inputAltura" name="altura" class="inputs required"><a> m</a>
-                    </div>
-                </div>
-                <div class="container">
-                <div id="fatorAtividade">
-                    <label id="fatAt" for="fa">FATOR ATIVIDADE: </label><br>
-                    <select id="fa" name="fatorAtividade">
-                        <option value="1">Selecione...</option>
-                        <option value="1.2" >Acamado</option>
-                        <option value="1.25" >Acamado, mas se movimenta</option>
-                        <option value="1.3" >Deambula</option>
-                        <option value="1.5" >Atividade leve</option>
-                    </select>
-                </div>
-                <div id="fatorInjuria">
-                    <label id="fatInj" for="fi">FATOR INJÚRIA: </label><br>
-                    <select id="fi" name="fatorInjuria">
-                        <option value="1">Selecione...</option>
-                        <option value="1" >Não complicado</option>
-                        <option value="1.1" >Pós operatório</option>
-                        <option value="1.2" >Fratura</option>
-                        <option value="1.3" >Sepse</option>
-                        <option value="1.4" >Câncer</option>
-                        <option value="1.5" >Insuficiência cardíaca</option>
-                    </select>
-                </div>
-                <div>
-                    <button type="submit" id="calc">CALCULAR</button>
-                </div>
-            </form>
-        </div>
-        
-    </main>    
+    <div>
+        <a id="iniciar" href="index.html">INICIAR</a>
+    </div>
 </body>
 </html>
