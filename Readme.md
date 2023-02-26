@@ -1,0 +1,1 @@
+"Esse sistema é uma calculadora que visa agilizar o calculo do gasto energético basal e total de uma pessoa."
