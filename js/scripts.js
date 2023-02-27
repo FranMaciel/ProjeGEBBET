@@ -7,7 +7,7 @@ let gastoEnergeticoBasal;
 let gastoEnergeticoTotal;
 
 btn.addEventListener("click", function (e){
-    /*e.preventDefault();*/
+    e.preventDefault();
     const genero = document.querySelector('input[name="genero"]:checked');
     const vGenero = genero.value;
     const idade = document.querySelector("#inputIdade");
@@ -25,7 +25,24 @@ btn.addEventListener("click", function (e){
     const valorDoGEB = document.querySelector("#valorGEB");
     const valorDoGET = document.querySelector("#valorGET");
 
-   if(document.getElementById("inputIdade").value <= "20" && 
+
+    if(document.getElementById("inputIdade").value ==  "" ||
+    document.getElementById("inputPeso").value == "" ||
+    document.getElementById("inputAltura").value == "" || 
+        document.getElementById("fa").selectedIndex == [0] || 
+        document.getElementById("fi").selectedIndex == [0] )  {
+        alert("Observe os campos e veja se falta alguma informação. A altura deve ser dada em metros(Ex. 1,60)");
+        return;
+        
+    } else if (document.getElementById("inputIdade").value <= "20" && 
+    document.getElementById("inputPeso").value <= "6,5" &&
+     document.getElementById("inputAltura").value < "0.6"){
+         alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
+         return; }
+  
+  
+  
+    if(document.getElementById("inputIdade").value <= "20" && 
         document.getElementById("inputPeso").value <= "6,5" && 
         document.getElementById("inputAltura").value < "0.6"){
             alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
