@@ -7,7 +7,7 @@ let gastoEnergeticoBasal;
 let gastoEnergeticoTotal;
 
 btn.addEventListener("click", function (e){
-    /*e.preventDefault();*/
+    e.preventDefault();
     const genero = document.querySelector('input[name="genero"]:checked');
     const vGenero = genero.value;
     const idade = document.querySelector("#inputIdade");
@@ -25,24 +25,36 @@ btn.addEventListener("click", function (e){
     const valorDoGEB = document.querySelector("#valorGEB");
     const valorDoGET = document.querySelector("#valorGET");
 
-    if(idade.value <= "20" || idade.value === "" || idade.value === null){
-        alert("Por favor, preencha uma idade válida!");
-        inputIdade.focus();
+
+    if(document.getElementById("inputIdade").value ==  "" ||
+    document.getElementById("inputPeso").value == "" ||
+    document.getElementById("inputAltura").value == "" || 
+        document.getElementById("fa").selectedIndex == [0] || 
+        document.getElementById("fi").selectedIndex == [0] )  {
+        alert("Observe os campos e veja se falta alguma informação. A altura deve ser dada em metros(Ex. 1,60)");
         return;
-    } else if(peso.value === "" || peso.value === null){
-        alert("Por favor, preencha o peso!");
-        inputPeso.focus();
-        return;
-    } else if(altura.value === "" || altura.value === null){
-        alert("Por favor, preencha a altura!");
-        inputAltura.focus();
-        return;
-    }      
-    calcIMC(vPeso, vAltura);
-    classifIMC(vIdade, imc);
-    gasto_energetico_basal(vGenero, vIdade, vPeso, vAltura);
-    gasto_energetico_total(gastoEnergeticoBasal, opcaoFA, opcaoFI);
-   
+        
+    } else if (document.getElementById("inputIdade").value <= "20" && 
+    document.getElementById("inputPeso").value <= "6,5" &&
+     document.getElementById("inputAltura").value < "0.6"){
+         alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
+         return; }
+  
+  
+  
+    if(document.getElementById("inputIdade").value <= "20" && 
+        document.getElementById("inputPeso").value <= "6,5" && 
+        document.getElementById("inputAltura").value < "0.6"){
+            alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
+            return;
+
+   }else{
+        calcIMC(vPeso, vAltura);
+        classifIMC(vIdade, imc);
+        gasto_energetico_basal(vGenero, vIdade, vPeso, vAltura);
+        gasto_energetico_total(gastoEnergeticoBasal, opcaoFA, opcaoFI);
+   }
+
 
     showResultado();
     resultado (valorDoIMC, classificacaoDoIMC,valorDoGEB, valorDoGET);

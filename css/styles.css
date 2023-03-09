@@ -8,23 +8,24 @@
 /* pagina inicial*/
 #pgInicial{
     align-items: center;
-    text-align: center;
-    font-size: 45px;
+    text-align: center ;
+    font-size: 45px ;
     display: flexbox;
 }
 
 #logoPgInicial{
-    padding-top: 100px;
-    padding-bottom: 20px;
-    margin: auto;
-    display: block;
-    width: 40%;
+    padding-top: 100px !important;
+    padding-bottom: 20px !important;
+    margin: auto !important;
+    display: block !important;
+    width: 40% !important;
 }
 
 #tituloPgInicial{
     font-size: 65px;
     padding-right: 55px;
-    padding-bottom: 160px;   
+    padding-bottom: 160px ; 
+      
 }
 
 
@@ -37,6 +38,7 @@
 body {
     background-image: url("../img/Fundo.png");
     background-size: cover;
+
     
 }
 
@@ -50,6 +52,9 @@ h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-left: 30px;  
+    position:absolute;
+    padding-top: 50px;
+
 }
 
 main {
@@ -65,15 +70,23 @@ main {
 h2{
     font-weight: bold;
     font-size: 2rem;
+   
+
+
 }
 
 div {
-    padding: 3px;
+    padding:3px;
+
+
+
+
 }
 
 #gen, #id, #pe, #al, #fatAt, #fatInj, #result {
     font-size: 25px;
-    font-weight: bold;   
+    font-weight: bold; 
+  
 }
 
 #pe {
@@ -140,7 +153,7 @@ a {
     font-size: 25px;
     font-weight: bold;
     border: 1px solid transparent;
-    border-radius: 30%;
+    border-radius: 40% ;
     padding: 10px;
     cursor: pointer;
     text-decoration: none;
@@ -173,7 +186,7 @@ a {
     box-sizing: border-box;
     transition: .3x;
     cursor: pointer;
-    color: black;
+    color: rgb(15, 8, 1);
     
 }
 
@@ -189,12 +202,15 @@ a {
     text-align: center;
     padding-bottom: 20px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
+    
+    
 }
 #result-container {
     text-align:left;
     margin-left: 10px;
     font-size: 25px;
+
     
 }
 
@@ -208,11 +224,14 @@ a {
     font-size: 25px;
     font-weight: bold;
     border: 1px solid transparent;
-    border-radius: 30%;
+    border-radius: 40%;
     cursor: pointer;
     text-decoration: none;
+    
 }
 
 #btn-consult {
     padding-top: 200px;
+    
+
 }
