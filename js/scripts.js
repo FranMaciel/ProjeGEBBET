@@ -31,20 +31,18 @@ btn.addEventListener("click", function (e){
     document.getElementById("inputAltura").value == "" || 
         document.getElementById("fa").selectedIndex == [0] || 
         document.getElementById("fi").selectedIndex == [0] )  {
-        alert("Observe os campos e veja se falta alguma informação. A altura deve ser dada em metros(Ex. 1,60)");
+        alert("Observe os campos e veja se falta alguma informação. A altura deve ser dada em centímetros(Ex. 160)");
         return;
         
     } else if (document.getElementById("inputIdade").value <= "19" && 
     document.getElementById("inputPeso").value <= "6,5" &&
-     document.getElementById("inputAltura").value < "0.6"){
+     document.getElementById("inputAltura").value < "60"){
          alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
          return; }
   
-  
-  
     if(document.getElementById("inputIdade").value <= "19" && 
-        document.getElementById("inputPeso").value <= "6,5" && 
-        document.getElementById("inputAltura").value < "0.6"){
+        document.getElementById("inputPeso").value <= "6,5" &&
+        document.getElementById("inputAltura").value < "60"){
             alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
             return;
 
@@ -64,7 +62,7 @@ btn.addEventListener("click", function (e){
 /*Função calcular o IMC*/
 function calcIMC(vPeso, vAltura){
     if(vPeso !== "" || vAltura !== ""){
-        imc = (vPeso /vAltura/vAltura).toFixed(2);
+        imc = (vPeso /(vAltura/100)/(vAltura/100)).toFixed(2);
     } else {
         alert("Insira peso e altura válido");
         
@@ -99,7 +97,7 @@ function classifIMC(vIdade, imc){
         classificacao = "Peso normal";
     } else if (imc <= 22){
         classificacao = "Baixo peso";
-    } else if (ime >= 27) {
+    } else if (imc >= 27) {
         classificacao = "Excesso de peso";
     } else{
         alert("Insira peso e altura válido")
@@ -110,9 +108,9 @@ function classifIMC(vIdade, imc){
 /*Função para calcular o GEB e o GET*/
 function gasto_energetico_basal(vGenero, vIdade, vPeso, vAltura) {
     if(vGenero === 'f'){
-        gastoEnergeticoBasal = (655.0955 + 9.56 * vPeso + 1.8496 * (vAltura * 100 / 1) - 4.6756 * vIdade).toFixed(2);
+        gastoEnergeticoBasal = (655.0955 + 9.56 * vPeso + 1.8496 * vAltura - 4.6756 * vIdade).toFixed(2);
     } else if(vGenero === 'm') {
-        gastoEnergeticoBasal = (64.473 + 13.7516 * vPeso + 5.0033 * (vAltura * 100 / 1) - 6.7550 * vIdade).toFixed(2);
+        gastoEnergeticoBasal = (64.473 + 13.7516 * vPeso + 5.0033 * vAltura - 6.7550 * vIdade).toFixed(2);
     } else{
         alert("Insira o gênero.")
     }
