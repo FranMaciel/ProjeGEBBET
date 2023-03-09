@@ -42,7 +42,7 @@ btn.addEventListener("click", function (e){
   
   
   
-    if(document.getElementById("inputIdade").value <= "20" && 
+    if(document.getElementById("inputIdade").value <= "19" && 
         document.getElementById("inputPeso").value <= "6,5" && 
         document.getElementById("inputAltura").value < "0.6"){
             alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
