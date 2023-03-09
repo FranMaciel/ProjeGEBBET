@@ -78,7 +78,7 @@ function classifIMC(vIdade, imc){
         } else if (imc >= 35 && imc  < 40){
             classificacao = "Obesidade classe II";
     
-        } else if(imc  <= 40) {
+        } else if(imc  >= 40) {
             classificacao = "Obesidade classe III";
 
         };
