@@ -55,6 +55,7 @@ btn.addEventListener("click", function (e){
         gasto_energetico_total(gastoEnergeticoBasal, opcaoFA, opcaoFI);
    }
 
+
     showResultado();
     resultado (valorDoIMC, classificacaoDoIMC,valorDoGEB, valorDoGET);
 
@@ -89,7 +90,7 @@ function classifIMC(vIdade, imc){
         } else if (imc >= 35 && imc  < 40){
             classificacao = "Obesidade classe II";
     
-        } else if(imc  <= 40) {
+        } else if(imc  >= 40) {
             classificacao = "Obesidade classe III";
 
         };
@@ -134,4 +135,6 @@ function showResultado(){
     formContainer.classList.toggle("hide");
     resultContainer.classList.toggle("hide");
 };
+
+
 
