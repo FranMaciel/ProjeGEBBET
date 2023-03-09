@@ -25,18 +25,24 @@ btn.addEventListener("click", function (e){
     const valorDoGEB = document.querySelector("#valorGEB");
     const valorDoGET = document.querySelector("#valorGET");
 
-   if(document.getElementById("inputIdade").value <= "20" && 
-        document.getElementById("inputPeso").value <= "6,5" && 
-        document.getElementById("inputAltura").value < "0.6"){
-            alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
-            return;
-
-   }else{
-        calcIMC(vPeso, vAltura);
-        classifIMC(vIdade, imc);
-        gasto_energetico_basal(vGenero, vIdade, vPeso, vAltura);
-        gasto_energetico_total(gastoEnergeticoBasal, opcaoFA, opcaoFI);
-   }
+    if(idade.value <= "20" || idade.value === "" || idade.value === null){
+        alert("Por favor, preencha uma idade válida!");
+        inputIdade.focus();
+        return;
+    } else if(peso.value === "" || peso.value === null){
+        alert("Por favor, preencha o peso!");
+        inputPeso.focus();
+        return;
+    } else if(altura.value === "" || altura.value === null){
+        alert("Por favor, preencha a altura!");
+        inputAltura.focus();
+        return;
+    }      
+    calcIMC(vPeso, vAltura);
+    classifIMC(vIdade, imc);
+    gasto_energetico_basal(vGenero, vIdade, vPeso, vAltura);
+    gasto_energetico_total(gastoEnergeticoBasal, opcaoFA, opcaoFI);
+   
 
     showResultado();
     resultado (valorDoIMC, classificacaoDoIMC,valorDoGEB, valorDoGET);
@@ -117,4 +123,6 @@ function showResultado(){
     formContainer.classList.toggle("hide");
     resultContainer.classList.toggle("hide");
 };
+
+
 
