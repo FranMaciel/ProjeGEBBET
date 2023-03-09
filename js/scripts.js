@@ -34,7 +34,7 @@ btn.addEventListener("click", function (e){
         alert("Observe os campos e veja se falta alguma informação. A altura deve ser dada em metros(Ex. 1,60)");
         return;
         
-    } else if (document.getElementById("inputIdade").value <= "20" && 
+    } else if (document.getElementById("inputIdade").value <= "19" && 
     document.getElementById("inputPeso").value <= "6,5" &&
      document.getElementById("inputAltura").value < "0.6"){
          alert("Por favor, preencha os campos com dados válidos para avaliar adulto ou idoso!"); 
