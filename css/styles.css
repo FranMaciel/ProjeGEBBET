@@ -66,10 +66,7 @@ main {
     text-align: center; 
 }
 
-#logo {
-    width: 22%;
-    position:fixed;
-}
+
 
 h2{
     font-weight: bold;
@@ -238,4 +235,17 @@ a {
     padding-top: 200px;
     
 
+}
+#logo {
+    width: 45%;
+    position:relative;
+}
+
+@media (max-width: 530px) {
+    #logo {
+        width: 30%;
+        position:relative;
+    }
+    
+    
 }
