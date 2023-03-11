@@ -12,5 +12,6 @@ Equação de Harris & Benedict:
     Fabiany Gomes Maglio;
     Franciele Aparecida Maciel;
     Gabriel Retes Sabugo.
+  Para testar a primeira versão do produto, utilize o link <https://franmaciel.github.io/ProjeGEBGET/>, e compartilhe com a gente sua experência.
     
 
