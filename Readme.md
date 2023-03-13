@@ -6,9 +6,10 @@ Equação de Harris & Benedict:
       GEB = 66,4730 + (13,7516 x peso [kg]) + (5.0033 x altura [cm]) - (6.7550 x idade [anos]).
   Para o cálculo do gasto energético total (GET), o usuário poderá escolher aplicar o Fator atividade e Fator injúria, sendo estes multiplicados ao valor do GEB.
   A fórmula do cálculo do IMC (Índice de Massa Corporal) é peso (kg) dividido pela altura (m) ao quadrado (P/A²) e o resultado é expresso em kg/m². A classificação para adultos será considerada a indicada pela World Health Organization (2000) e a classificação para idoso será considerada de Lipschitz (1994).
-  Para testar a primeira versão do produto, utilize o link <https://franmaciel.github.io/ProjeGEBGET/>, e compartilhe com a gente sua experência.
+  Para testar a primeira versão do produto, utilize o link <https://franmaciel.github.io/ProjeGEBGET/>, selecione o gênero, coloque a idade (anos), o peso (kg) e a altura (cm), selecione o fator atividade e o fator injúria, e clique em "Calcular" para verificar o IMC, a classificação do IMC, o GEB e o GET. Compartilhe com a gente sua experência.
   Desenvolvedores:
     Aline Ferreira Pena;
+    André L. S. Martins;
     Daiane Dias Alves;
     Fabiany Gomes Maglio;
     Franciele Aparecida Maciel;
